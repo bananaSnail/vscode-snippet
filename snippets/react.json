@@ -1,0 +1,56 @@
+{
+    "React-TypeScript-Base Component": {
+        "prefix": "frtb", 
+        "body": [
+            "import * as React from 'react'",
+            "interface IProps {}",
+            "interface IState {}",
+            "class ${TM_FILENAME_BASE/(^[a-z])|(-([a-z]))/${1:/upcase}${3:/upcase}/g} extends React.Component<IProps, IState> {",
+            "\tstate = {}",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<div styleName=\"\"></div>",
+            "\t\t)",
+            "\t}",
+            "}",
+            "export default ${TM_FILENAME_BASE/(^[a-z])|(-([a-z]))/${1:/upcase}${3:/upcase}/g}"
+            
+        ],
+        "description": "Base for React-TypeScript File"
+    },
+    "React-TypeScript-Pure Component": {
+        "prefix": "frtp", 
+        "body": [
+            "import * as React from 'react'",
+            "interface IProps {}",
+            "interface IState {}",
+            "class${TM_FILENAME_BASE/(^[a-z])|(-([a-z]))/${1:/upcase}${3:/upcase}/g} extends React.PureComponent<IProps, IState> {",
+            "\tstate = {}",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<div styleName=\"\"></div>",
+            "\t\t)",
+            "\t}",
+            "}",
+            "export default ${TM_FILENAME_BASE/(^[a-z])|(-([a-z]))/${1:/upcase}${3:/upcase}/g}"
+            
+        ],
+        "description": "Base for React-TypeScript-Pure-Component File"
+    },
+    "React-TypeScript-Function Component": {
+        "prefix": "frtf",
+        "body": [
+            "import * as React from 'react'",
+            "interface IProps {}",
+            "const ${TM_FILENAME_BASE/(^[a-z])|(-([a-z]))/${1:/upcase}${3:/upcase}/g} = React.memo(",
+            "\t({}: IProps) => {",
+            "\t\treturn (",
+            "\t\t\t<div styleName=\"\"></div>",
+            "\t\t)",
+            "\t}",
+            ")",
+            "export default ${TM_FILENAME_BASE/(^[a-z])|(-([a-z]))/${1:/upcase}${3:/upcase}/g}"
+        ],
+        "description": "Base for React-TypeScript-Function File"
+    }
+}

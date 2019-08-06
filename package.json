@@ -1,0 +1,76 @@
+{
+	"name": "forc-snippets",
+	"displayName": "forc-snippets",
+	"description": "Provide creation vue/react + typescript project template",
+	"version": "0.0.6",
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"publisher": "forc-snippets",
+	"keywords": [
+		"Vue",
+		"React",
+		"Typescript",
+		"Javascript",
+		"vscode snippets"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ForChangeFE/vscode-snippet.git"
+	},
+	"extensionDependencies": [
+		"octref.vetur"
+	],
+	"categories": [
+		"Snippets"
+	],
+	"activationEvents": [
+		"onCommand:extension.fos"
+	],
+	"main": "./out/extension.js",
+	"icon": "images/forchange.png",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.fos",
+				"title": "fos convenient plugin"
+			}
+		],
+		"snippets": [
+			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/react.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/react.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.20.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.0.0-next.0"
+	}
+}

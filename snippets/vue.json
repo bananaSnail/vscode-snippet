@@ -1,0 +1,121 @@
+{
+	"Vue-JavaScript Single File Component": {
+		"prefix": "fvj",
+		"body": [
+			"<template>",
+			"\t<div class=\"${TM_FILENAME_BASE/([a-z])?([A-Z])/$1${1:+-}${2:/downcase}/g}\">",
+			"",
+			"\t</div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"\tdata() {",
+			"\t\treturn {",
+			"\t\t\t${0}",
+			"\t\t}",
+			"\t}",
+			"}",
+			"</script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			".${TM_FILENAME_BASE/([a-z])?([A-Z])/$1${1:+-}${2:/downcase}/g}{",
+			"\t",
+			"}",
+			"</style>"
+		],
+		"description": "Base for Vue-JavaScript File"
+	},
+	"Vue-Typescript Single File Component": {
+		"prefix": "fvt",
+		"body": [
+			"<template>",
+			"\t<div class=\"${TM_FILENAME_BASE/([a-z])?([A-Z])/$1${1:+-}${2:/downcase}/g}\">",
+			"",
+			"\t</div>",
+			"</template>",
+			"",
+			"<script lang=\"ts\">",
+			"import {Vue, Prop, Component} from 'vue-property-decorator'",
+			"",
+			"@Component({})",
+			"export default class ${TM_FILENAME_BASE/(^[a-z])|(-([a-z]))/${1:/upcase}${3:/upcase}/g} extends Vue {",
+			"\t${0}",
+			"}",
+			"</script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			".${TM_FILENAME_BASE/([a-z])?([A-Z])/$1${1:+-}${2:/downcase}/g}{",
+			"\t",
+			"}",
+			"</style>"
+		],
+		"description": "Base for Vue-TypeScript File"
+	},
+	"File Component with JavaScript": {
+		"prefix": "<script>",
+		"body": [
+			"<script>",
+			"import Vue from 'vue'",
+			"",
+			"export default {",
+			"\tdata() {",
+			"\t\treturn {",
+			"\t\t\t${0}",
+			"\t\t}",
+			"\t}",
+			"}",
+			"</script>"
+		],
+		"description": "Base File with JavaScript"
+	},
+	"File Component with Typescript": {
+		"prefix": "<script lang=\"ts\"",
+		"body": [
+			"<script lang=\"ts\">",
+			"import {Vue, Prop, Component} from 'vue-property-decorator'",
+			"",
+			"@Component({})",
+			"export default class ${TM_FILENAME_BASE/(^[a-z])|(-([a-z]))/${1:/upcase}${3:/upcase}/g} extends Vue {",
+			"\t${0}",
+			"}",
+			"</script>",
+			""
+		],
+		"description": "Base File with Typescript"
+	},
+	"ts-prop":{
+        "prefix":"ts-prop",
+        "body":[
+            "@Prop(${1:Object}) ${2:propName}!:${3:type}"
+        ]
+    },
+    "ts-watch":{
+        "prefix":"ts-watch",
+        "body":[
+            "@Watch('${1:propName}')",
+            "on$1Changed(val:${2:type},oldVal:${2}){",
+            "\t${0}",
+            "}"
+        ]
+	},
+	"ts-state":{
+        "prefix":"ts-state",
+        "body":[
+            "@${1}State('${2}') ${2}!:${3:any}"
+        ]
+    },
+    "ts-action":{
+        "prefix":"ts-action",
+        "body":[
+            "@${1}Action('${2}') ${2}!:(x:${3:any})=>${4:void}"
+        ]
+    },
+    "ts-mutation":{
+        "prefix":"ts-mutation",
+        "body":[
+            "@${1}Mutation('${2}') ${2}!:(x:${3:any})=>${4:void}"
+        ]
+    }
+}
+

@@ -1,0 +1,84 @@
+{
+	"Vue-JavaScript Single File Component": {
+		"prefix": "vjbase",
+		"body": [
+			"<template>",
+			"\t<div>",
+			"",
+			"\t</div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"\tdata() {",
+			"\t\treturn {",
+			"\t\t\t${0}",
+			"\t\t}",
+			"\t}",
+			"}",
+			"</script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			"",
+			"</style>"
+		],
+		"description": "Base for Vue-JavaScript File"
+	},
+	"Vue-Typescript Single File Component": {
+		"prefix": "vtbase",
+		"body": [
+			"<template>",
+			"\t<div>",
+			"",
+			"\t</div>",
+			"</template>",
+			"",
+			"<script lang=\"ts\">",
+			"import {Vue, Prop, Component} from 'vue-property-decorator'",
+			"",
+			"@Component({})",
+        	"export default class ClassName extends Vue {",
+			"\t${0}",
+			"}",
+			"</script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			"",
+			"</style>"
+		],
+		"description": "Base for Vue-JavaScript File"
+	},
+	"File Component with JavaScript": {
+		"prefix": "<script>",
+		"body": [
+			"<script>",
+			"import Vue from 'vue'",
+			"",
+			"export default {",
+			"\tdata() {",
+			"\t\treturn {",
+			"\t\t\t${0}",
+			"\t\t}",
+			"\t}",
+			"}",
+			"</script>"
+		],
+		"description": "Base File with JavaScript"
+	},
+	"File Component with Typescript": {
+		"prefix": "<script lang=\"ts\"",
+		"body": [
+			"<script lang=\"ts\">",
+			"import {Vue, Prop, Component} from 'vue-property-decorator'",
+			"",
+			"@Component({})",
+        	"export default class ClassName extends Vue {",
+			"\t${0}",
+			"}",
+			"</script>",
+			""
+		],
+		"description": "Base File with Typescript"
+	}
+}
+
